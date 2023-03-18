@@ -17,4 +17,8 @@ public class Calculator
     public int Number2 { get; }
 
     public int Sum() { return Number1 + Number2; }
+
+    public int Minus() { return Number1 - Number2; }
+
+    public float Division() { return Number1 / Number2; }
 }
