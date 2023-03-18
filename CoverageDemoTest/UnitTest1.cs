@@ -40,5 +40,15 @@ namespace CoverageDemoTest
 
             Assert.Equal(substraction, result);
         }
+
+        [Fact]
+        public void MainDivideByZeroTest()
+        {
+            var num1 = 12;
+            var num2 = 0;
+            var obj = new Calculator(num1, num2);
+
+            Assert.Throws<DivideByZeroException>(() => obj.Division());
+        }
     }
 }

@@ -16,5 +16,15 @@ public class Calculator
 
     public int Minus() { return Number1 - Number2; }
 
-    public float Division() { return Number1 / Number2; }
+    public float Division()
+    {
+        if (Number2 == 0)
+        {
+            throw new DivideByZeroException();
+        }
+        else
+        {
+            return Number1 / Number2;
+        }
+    }
 }
