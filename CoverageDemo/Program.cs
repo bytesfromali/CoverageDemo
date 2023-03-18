@@ -1,4 +1,7 @@
-﻿public class Calculator
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
+
+public class Calculator
 {
     public Calculator(int number1, int number2)
     {
