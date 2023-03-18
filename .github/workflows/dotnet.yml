@@ -34,6 +34,7 @@ jobs:
         reports: "CoverageDemoTest/TestResults/**/*.cobertura.xml"
         targetdir: "coveragereport"
         reporttypes: Html_Dark
+        title: CoverageDemo Code Coverage Report
     - name: Upload GitHub Pages artifact
       uses: actions/upload-pages-artifact@v1.0.7
       with:
@@ -42,4 +43,4 @@ jobs:
     - name: Deploy GitHub Pages site
       uses: actions/deploy-pages@v2.0.0
       with:
-        artifact_name: CovderageDemoCoverageReport
+        artifact_name: CovderageDemoCoverageReport-$(date +'%Y-%m-%d')
