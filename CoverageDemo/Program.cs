@@ -1,11 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-
-var num1 = 12;
-var num2 = 13;
-Console.WriteLine(new Calculator(num1, num2).Sum());
-
-public class Calculator
+﻿public class Calculator
 {
     public Calculator(int number1, int number2)
     {
