@@ -25,7 +25,7 @@ jobs:
         restore-keys: | 
           ${{ runner.os }}-nuget-
     - name: Build
-      run: dotnet build --configuration Release
+      run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal --collect "XPlat Code Coverage"
     - name: ReportGenerator
