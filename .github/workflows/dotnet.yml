@@ -35,12 +35,16 @@ jobs:
         targetdir: "coveragereport"
         reporttypes: Html_Dark
         title: CoverageDemo Code Coverage Report
+    - name: "Set current date as env variable"
+      run: |
+        echo "builddate=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+      id: version  # this is used on variable path
     - name: Upload GitHub Pages artifact
       uses: actions/upload-pages-artifact@v1.0.7
       with:
-        name: CovderageDemoCoverageReport-$(date +'%Y-%m-%d')
+        name: CovderageDemoCoverageReport-${{ steps.version.outputs.builddate }}
         path: "coveragereport/"
     - name: Deploy GitHub Pages site
       uses: actions/deploy-pages@v2.0.0
       with:
-        artifact_name: CovderageDemoCoverageReport-$(date +'%Y-%m-%d')
+        artifact_name: CovderageDemoCoverageReport-${{ steps.version.outputs.builddate }}
